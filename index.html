@@ -211,7 +211,13 @@ function generateJSON() {
         data[i].method = document.getElementById(`methodInput${i}`).value;
         data[i].notes = document.getElementById(`notesInput${i}`).value;
     }
+    
     document.getElementById("btnOutput").value = JSON.stringify(data);
+    document.getElementById('btnOutput').style.display = 'block';
+
+    // copy to clipboard
+    document.getElementById('btnOutput').select();
+    document.execCommand('copy');
 }
 
 function importJSON() {
@@ -536,8 +542,12 @@ Guide by [USER=3768762]Dredlig[/USER], [USER=1079233]HunterTheHunter[/USER], [US
 Website by [USER=2881883]XessDx[/USER]`
 
 
-document.getElementById('btnOutput').value = bbcode;
-document.getElementById('btnOutput').style.display = 'block';
+    document.getElementById('btnOutput').value = bbcode;
+    document.getElementById('btnOutput').style.display = 'block';
+
+    // copy to clipboard
+    document.getElementById('btnOutput').select();
+    document.execCommand('copy');
 }
 
 function getName(str) {
