@@ -5,7 +5,7 @@ let API;
 
 window.onload = async function () {
 	// api
-	({ API } = await import("./js/API.js"));
+	({ API } = await import("./js/callAPI.js"));
 	if (!API.success) {
 		alert(
 			"API request failed!\nHypixel probably messed something up, try refreshing"
