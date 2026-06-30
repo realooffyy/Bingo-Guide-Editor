@@ -1,21 +1,24 @@
 let generateBBCode;
 let generateJSON;
 let importJSON;
+let API;
 
 window.onload = async function () {
+	// api
+	({ API } = await import("./js/API.js"));
+	if (!API.success) {
+		alert(
+			"API request failed!\nHypixel probably messed something up, try refreshing"
+		);
+	}
+
+	// imports for all buttons
 	({ generateBBCode } = await import("./js/bbcode.js"));
 	({ generateJSON, importJSON } = await import("./js/json.js"));
 
-	goals = [];
+	const goals = API.goals;
 
-	await fetch(`https://api.hypixel.net/resources/skyblock/bingo`)
-		.then((response) => response.json())
-		.then((data) => {
-			goals = data.goals;
-		})
-		.catch(function (error) {
-			console.log(error);
-		});
+	// page setup
 
 	for (i = 0; i < 25; i++) {
 		goals.push({ name: "", lore: "", method: "", notes: "" });
