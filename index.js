@@ -16,7 +16,7 @@ window.onload = async function () {
 	({ generateBBCode } = await import("./js/bbcode.js"));
 	({ generateJSON, importJSON } = await import("./js/json.js"));
 
-	const goals = API.goals;
+	const goals = [...API.goals];
 
 	// page setup
 

@@ -1,4 +1,7 @@
-export function generateBBCode() {
+export async function generateBBCode() {
+	let API;
+	({ API } = await import("./callAPI.js"));
+
 	let data = [];
 
 	for (i = 0; i < 25; i++) {
@@ -9,34 +12,11 @@ export function generateBBCode() {
 		data[i].notes = document.getElementById(`notesInput${i}`).value;
 	}
 
-	const monthNames = [
-		"January",
-		"February",
-		"March",
-		"April",
-		"May",
-		"June",
-		"July",
-		"August",
-		"September",
-		"October",
-		"November",
-		"December"
-	];
-
-	const d = new Date();
-	let month;
-	console.log(d.getMonth());
-	let year = d.getFullYear();
-	if (d.getMonth() == 11) {
-		year++;
-		month = "January";
-	} else {
-		month = monthNames[d.getMonth() + 1];
-	}
+	// eg. July 2026
+	const date = API.name;
 
 	let bbcode = `
-[HEADING=1][CENTER][a=t]Bingo Guide for ${month} ${year}[/a][/CENTER][/HEADING]
+[HEADING=1][CENTER][a=t]Bingo Guide for ${date}[/a][/CENTER][/HEADING]
 
 [HEADING=2][CENTER][a=toc]Table of Contents[/a][/CENTER][/HEADING]
 [CENTER] [jump=useful] Most Useful [/jump]
