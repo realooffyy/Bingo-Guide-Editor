@@ -15,8 +15,7 @@ export async function generateBBCode() {
 	// eg. July 2026
 	const date = API.name;
 
-	let bbcode = `
-[HEADING=1][CENTER][a=t]Bingo Guide for ${date}[/a][/CENTER][/HEADING]
+	let bbcode = `[HEADING=1][CENTER][a=t]Bingo Guide for ${date}[/a][/CENTER][/HEADING]
 
 [HEADING=2][CENTER][a=toc]Table of Contents[/a][/CENTER][/HEADING]
 [CENTER] [jump=useful] Most Useful [/jump]
