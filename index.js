@@ -57,3 +57,9 @@ window.onload = async function () {
 		document.getElementById("output").append(container);
 	}
 };
+
+// prevent accidental refresh
+window.addEventListener("beforeunload", (event) => {
+	event.preventDefault();
+	event.returnValue = "";
+});
