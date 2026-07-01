@@ -12,8 +12,39 @@ export async function generateBBCode() {
 		data[i].notes = document.getElementById(`notesInput${i}`).value;
 	}
 
-	// eg. July 2026
-	const date = API.name;
+	let date = "";
+
+	if (API.success) {
+		date = API.name;
+	} else {
+		// fallback to old method
+		const monthNames = [
+			"January",
+			"February",
+			"March",
+			"April",
+			"May",
+			"June",
+			"July",
+			"August",
+			"September",
+			"October",
+			"November",
+			"December"
+		];
+		const d = new Date();
+		let month;
+		console.log(d.getMonth());
+		let year = d.getFullYear();
+		if (d.getMonth() == 11) {
+			year++;
+			month = "January";
+		} else {
+			month = monthNames[d.getMonth() + 1];
+		}
+
+		date = `${month} ${year}`;
+	}
 
 	let bbcode = `[HEADING=1][CENTER][a=t]Bingo Guide for ${date}[/a][/CENTER][/HEADING]
 
