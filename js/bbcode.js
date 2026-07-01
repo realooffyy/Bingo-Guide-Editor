@@ -299,8 +299,7 @@ You can get coins from doing relics in spider den. (Max 310,000)
 Mine sand to reach mining XII for the Dwarven Mines.
 Put #BingoBrewers after our splashes!
 
-Guide by [USER=3768762]Dredlig[/USER], [USER=1079233]HunterTheHunter[/USER], [USER=3270837]Indigo_Polecat[/USER]
-Website by [USER=2881883]XessDx[/USER]`;
+Guide by ooffyy and proofreaders at Bingo Brewers`;
 
 	document.getElementById("btnOutput").value = bbcode;
 	document.getElementById("btnOutput").style.display = "block";
