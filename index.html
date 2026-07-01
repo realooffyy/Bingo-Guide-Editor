@@ -1,549 +1,197 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Skyblock.Bingo lets you view your Hypixel Skyblock bingo stats, leaderboard, and guide for this month's goals!">
-    <meta name="keywords" content="bingo, hypixel, skyblock, hypixel skyblock">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="language" content="English">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://skyblock.bingo/MinecraftColorCodes.min.3.7.js"></script>
-    <title>Bingo Editor</title>
-</head>
-<style>
-body {
-  padding: 16px;
-  background-color: #070F15;
-  font-family: 'Atkinson Hyperlegible', sans-serif;
-  color: white;
-}
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Skyblock.Bingo lets you view your Hypixel Skyblock bingo stats, leaderboard, and guide for this month's goals!" />
+		<meta
+			name="keywords"
+			content="bingo, hypixel, skyblock, hypixel skyblock" />
+		<meta name="robots" content="index, follow" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="language" content="English" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
+			rel="stylesheet" />
+		<link rel="icon" href="assets/favicon.ico" />
 
-input {
-  background-color: white;
-  color: rgb(0, 0, 0);
-  border: none;
-  border-radius: 30px;
-  -webkit-text-size-adjust: 100%;
-  tab-size: 4;
-  font-family: inherit;
-  box-sizing: border-box;
-  border-style: solid;
-  text-decoration: inherit;
-  --tw-bg-opacity: 1;
-  border-color: transparent;
-  border-radius: .5rem;
-  border-width: 1px;
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.25;
-  padding-top: .75rem;
-  padding-bottom: .75rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  margin-right: 8px;
-  width: calc(25vw - 26px);
-}
+		<!-- <script src="https://skyblock.bingo/MinecraftColorCodes.min.3.7.js"></script> -->
 
-textarea {
-  background-color: white;
-  color: rgb(0, 0, 0);
-  border: none;
-  border-radius: 30px;
-  -webkit-text-size-adjust: 100%;
-  tab-size: 4;
-  font-family: inherit;
-  box-sizing: border-box;
-  border-style: solid;
-  text-decoration: inherit;
-  --tw-bg-opacity: 1;
-  border-color: transparent;
-  border-radius: .5rem;
-  border-width: 1px;
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.25;
-  padding-top: .75rem;
-  padding-bottom: .75rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  margin-right: 8px;
-  width: calc(25vw - 26px);
-}
+		<title>Guide Editor</title>
+	</head>
+	<style>
+		body {
+			padding: 16px;
+			background-color: #070f15;
+			font-family: "Atkinson Hyperlegible", sans-serif;
+			color: white;
+		}
 
-#add-btn {
-  margin-bottom: 16px;
-  background-color: white;
-  color: rgb(0, 0, 0);
-  border-radius: 30px;
-  -webkit-text-size-adjust: 100%;
-  tab-size: 4;
-  font-family: inherit;
-  box-sizing: border-box;
-  border-style: solid;
-  text-decoration: inherit;
-  --tw-bg-opacity: 1;
-  border-color: transparent;
-  border-radius: .5rem;
-  border-width: 1px;
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.25;
-  padding-top: .75rem;
-  padding-bottom: .75rem;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  margin-right: 8px;
-}
+		input {
+			background-color: white;
+			color: rgb(0, 0, 0);
+			border: none;
+			border-radius: 30px;
+			-webkit-text-size-adjust: 100%;
+			tab-size: 4;
+			font-family: inherit;
+			box-sizing: border-box;
+			border-style: solid;
+			text-decoration: inherit;
+			--tw-bg-opacity: 1;
+			border-color: transparent;
+			border-radius: 0.5rem;
+			border-width: 1px;
+			font-weight: 500;
+			font-size: 1rem;
+			line-height: 1.25;
+			padding-top: 0.75rem;
+			padding-bottom: 0.75rem;
+			padding-left: 1.25rem;
+			padding-right: 1.25rem;
+			box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+			margin-right: 8px;
+			width: calc(25vw - 26px);
+		}
 
-.container {
-  width: fit-content;
-  padding: 8px;
-  background-color: white;
-  border-radius: 8px;
-  display: flex;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  margin-bottom: 16px;
-}
+		textarea {
+			background-color: white;
+			color: rgb(0, 0, 0);
+			border: none;
+			border-radius: 30px;
+			-webkit-text-size-adjust: 100%;
+			tab-size: 4;
+			font-family: inherit;
+			box-sizing: border-box;
+			border-style: solid;
+			text-decoration: inherit;
+			--tw-bg-opacity: 1;
+			border-color: transparent;
+			border-radius: 0.5rem;
+			border-width: 1px;
+			font-weight: 500;
+			font-size: 1rem;
+			line-height: 1.25;
+			padding-top: 0.75rem;
+			padding-bottom: 0.75rem;
+			padding-left: 1.25rem;
+			padding-right: 1.25rem;
+			box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+			margin-right: 8px;
+			width: calc(25vw - 26px);
+		}
 
-button:active {
-    transform: scale(.9);
-}
+		#add-btn {
+			margin-bottom: 16px;
+			background-color: white;
+			color: rgb(0, 0, 0);
+			border-radius: 30px;
+			-webkit-text-size-adjust: 100%;
+			tab-size: 4;
+			font-family: inherit;
+			box-sizing: border-box;
+			border-style: solid;
+			text-decoration: inherit;
+			--tw-bg-opacity: 1;
+			border-color: transparent;
+			border-radius: 0.5rem;
+			border-width: 1px;
+			font-weight: 500;
+			font-size: 1rem;
+			line-height: 1.25;
+			padding-top: 0.75rem;
+			padding-bottom: 0.75rem;
+			padding-left: 1.25rem;
+			padding-right: 1.25rem;
+			box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+			margin-right: 8px;
+		}
 
-.container {
-  padding: 8px;
-  background-color: white;
-  border-radius: 8px;
-  display: flex;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  margin-bottom: 16px;
-}
+		.container {
+			width: fit-content;
+			padding: 8px;
+			background-color: white;
+			border-radius: 8px;
+			display: flex;
+			box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+			margin-bottom: 16px;
+		}
 
-.notesInput {
-    margin: 0px;
-}
+		button:active {
+			transform: scale(0.9);
+		}
 
-@-webkit-keyframes fadeIn {
-  from {opacity: 0} 
-  to {opacity: 1}
-}
+		.container {
+			padding: 8px;
+			background-color: white;
+			border-radius: 8px;
+			display: flex;
+			box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+			margin-bottom: 16px;
+		}
 
-@keyframes fadeIn {
-  from {opacity: 0} 
-  to {opacity: 1}
-}
+		.notesInput {
+			margin: 0px;
+		}
 
-.btnOutput {
-    display: none;
-    width: 100%;
-    height: 50rem;
-    white-space: pre-wrap;
-}
-</style>
-<body>
-    <input id="json-input" placeholder="JSON String">
-    <button id="add-btn" onclick="importJSON();">Import</button>
-    <button id="add-btn" onclick="generateJSON();" style="float: right; margin-right: 0px; background-color: rgba(79,70,229); color: white">Generate JSON</button>
-    <button id="add-btn" onclick="generateBBCODE();" style="float: right; margin-right: 16px; background-color: rgb(70, 120, 229); color: white">Generate BBCode</button>
+		@-webkit-keyframes fadeIn {
+			from {
+				opacity: 0;
+			}
+			to {
+				opacity: 1;
+			}
+		}
 
-    <div id="output"></div>
-    <textarea id="btnOutput" class="btnOutput"></textarea>
-</body>
-<script>
-window.onload = async function() {
-    goals = [{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''}];
-    await fetch(`https://api.hypixel.net/resources/skyblock/bingo`)
-    .then(response => response.json())
-    .then(data => {
-        goals = data.goals;
-    })
-    .catch(function(error) {
-        console.log(error);
-    });
-    for (i = 0; i < 25; i++) {
-        let container = document.createElement('container');
-        container.className = 'container';
+		@keyframes fadeIn {
+			from {
+				opacity: 0;
+			}
+			to {
+				opacity: 1;
+			}
+		}
 
-        let nameInput = document.createElement('textarea');
-        nameInput.id = `nameInput${i}`;
-        nameInput.value = goals[i].name;
-        container.append(nameInput);
+		.btnOutput {
+			display: none;
+			width: 100%;
+			height: 50rem;
+			white-space: pre-wrap;
+		}
+	</style>
+	<body>
+		<input id="json-input" placeholder="JSON String" />
+		<button id="add-btn" onclick="importJSON()">Import</button>
+		<button
+			id="add-btn"
+			onclick="generateJSON()"
+			style="
+				float: right;
+				margin-right: 0px;
+				background-color: rgba(79, 70, 229);
+				color: white;
+			">
+			Generate JSON
+		</button>
+		<button
+			id="add-btn"
+			onclick="generateBBCode()"
+			style="
+				float: right;
+				margin-right: 16px;
+				background-color: rgb(70, 120, 229);
+				color: white;
+			">
+			Generate BBCode
+		</button>
 
-        let loreInput = document.createElement('textarea');
-        loreInput.id = `loreInput${i}`;
-        loreInput.value = goals[i].lore;
-        loreInput.value = loreInput.value.replaceAll(/\xA7[a-f0-9]/g, '');
-
-        if(goals[i].lore == undefined) {
-            loreInput.style.backgroundColor = "rgb(229, 70, 70)";
-            loreInput.style.color = "white";
-        }
-
-        container.append(loreInput);
-
-        let methodInput = document.createElement('textarea');
-        methodInput.id = `methodInput${i}`;
-        methodInput.placeholder = 'Method';
-        container.append(methodInput);
-
-        let notesInput = document.createElement('textarea');
-        notesInput.className = `notesInput`;
-        notesInput.id = `notesInput${i}`;
-        notesInput.placeholder = 'Notes';
-        container.append(notesInput);
-
-        document.getElementById('output').append(container);
-    }
-}
-
-function generateJSON() {
-    let data = [{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''}];
-    for (i = 0; i < 25; i++) {
-        data[i].name = document.getElementById(`nameInput${i}`).value;
-        data[i].lore = document.getElementById(`loreInput${i}`).value;
-        data[i].method = document.getElementById(`methodInput${i}`).value;
-        data[i].notes = document.getElementById(`notesInput${i}`).value;
-    }
-    document.getElementById("btnOutput").value = JSON.stringify(data);
-}
-
-function importJSON() {
-    let data = JSON.parse(document.getElementById('json-input').value);
-    data.value = '';
-    document.getElementById('output').innerHTML = '';
-    for (i = 0; i < 25; i++) {
-        let container = document.createElement('container');
-        container.className = 'container';
-
-        let nameInput = document.createElement('textarea');
-        nameInput.id = `nameInput${i}`;
-        nameInput.value = data[i].name;
-        container.append(nameInput);
-
-        let loreInput = document.createElement('textarea');
-        loreInput.id = `loreInput${i}`;
-        loreInput.value = data[i].lore;
-        loreInput.value = loreInput.value.replaceAll(/\xA7[a-f0-9]/g, '');
-        if(data[i].lore == 'undefined') {
-            loreInput.style.backgroundColor = "rgb(229, 70, 70)";
-            loreInput.style.color = "white";
-        }
-        container.append(loreInput);
-
-        let methodInput = document.createElement('textarea');
-        methodInput.id = `methodInput${i}`;
-        methodInput.value = data[i].method;
-        if(data[i].method == '') {
-            methodInput.placeholder = 'Method';
-        }
-        container.append(methodInput);
-
-        let notesInput = document.createElement('textarea');
-        notesInput.id = `notesInput${i}`;
-        notesInput.value = data[i].notes;
-        if(data[i].notes == '') {
-            notesInput.placeholder = 'Notes';
-        }
-        container.append(notesInput);
-
-        document.getElementById('output').append(container);
-    }
-}
-
-function generateBBCODE() {
-    let data = [{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''},{name: '', lore: '', method: '', notes: ''}];
-    for (i = 0; i < 25; i++) {
-        data[i].name = document.getElementById(`nameInput${i}`).value;
-        data[i].lore = document.getElementById(`loreInput${i}`).value;
-        data[i].method = document.getElementById(`methodInput${i}`).value;
-        data[i].notes = document.getElementById(`notesInput${i}`).value;
-    }
-
-    const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    const d = new Date();
-    let month;
-    console.log(d.getMonth());
-    let year = d.getFullYear();
-    if (d.getMonth() == 11) {
-        year++;
-        month = 'January';
-    } else {
-        month = monthNames[d.getMonth() + 1];
-    }
-
-let bbcode = `
-[HEADING=1][CENTER][a=t]Bingo Guide for ${month} ${year}[/a][/CENTER][/HEADING]
-
-[HEADING=2][CENTER][a=toc]Table of Contents[/a][/CENTER][/HEADING]
-[CENTER] [jump=useful] Most Useful [/jump]
-[HR=25][/HR]
- [jump=goals] All Goals [/jump]
-[HR=25][/HR]
-[jump=info] Difficulty [/jump]
-[HR=25][/HR]
-[jump=order] Step-by-Step for the Start [/jump]
-[HR=25][/HR]
-[jump=minions] Recommended Minions [/jump]
-[HR=25][/HR]
-[jump=notes] Additional Information [/jump][/center]
-
-
-[HEADING=2][CENTER][a=useful]Most Useful[/a][/CENTER][/HEADING]
-[URL="https://discord.gg/kYkWjHy4nJ"]Bingo Brewers Discord (Free God Splashes)[/URL]
-[SPOILER="Bingo Website"]
-[URL unfurl="true"]https://skyblock.bingo[/URL][/SPOILER]
-
-
-Overall Bingo Difficulty: [b][COLOR=rgb(65, 168, 95)]Easy[/COLOR][COLOR=rgb(184, 49, 47)]Hard[/COLOR][COLOR=rgb(0, 168, 133)]Medium[/COLOR][/b]
-
-[a=goals]
-[HEADING=2][CENTER]All Goals[/CENTER][/HEADING]
-[/a]
-[TABLE]
-[TR]
-[TH][CENTER]Row #1[/CENTER][/TH]
-
-[TH][CENTER]Description[/CENTER][/TH]
-
-[TH][CENTER]Method[/CENTER][/TH]
-
-[TH][CENTER]Notes[/CENTER][/TH]
-[/TR]
-[TR]
-[TD][b][a=${getName(`${data[0].name}`)}]${data[0].name}[/a][/b][/TD]
-[TD]${data[0].lore}[/TD]
-[TD]${data[0].method}[/TD]
-[TD]${data[0].notes}[/TD]
-[/TR]
-[TR]
-[TD][b][a=${getName(`${data[1].name}`)}]${data[1].name}[/a][/b][/TD]
-[TD]${data[1].lore}[/TD]
-[TD]${data[1].method}[/TD]
-[TD]${data[1].notes}[/TD]
-[/TR]
-[TR]
-[TD][b][a=${getName(`${data[2].name}`)}]${data[2].name}[/a][/b][/TD]
-[TD]${data[2].lore}[/TD]
-[TD]${data[2].method}[/TD]
-[TD]${data[2].notes}[/TD]
-[/TR]
-[TR]
-[TD][b][a=${getName(`${data[3].name}`)}]${data[3].name}[/a][/b][/TD]
-[TD]${data[3].lore}[/TD]
-[TD]${data[3].method}[/TD]
-[TD]${data[3].notes}[/TD]
-[/TR]
-[TR]
-[TD][b][a=${getName(`${data[4].name}`)}]${data[4].name}[/a][/b][/TD]
-[TD]${data[4].lore}[/TD]
-[TD]${data[4].method}[/TD]
-[TD]${data[4].notes}[/TD]
-[/TR]
-[TR]
-[TH][CENTER]Row #2[/CENTER][/TH]
-
-[TH][CENTER]Description[/CENTER][/TH]
-
-[TH][CENTER]Method[/CENTER][/TH]
-
-[TH][CENTER]Notes[/CENTER][/TH]
-[/TR]
-[TR]
-[TD][b][a=${getName(`${data[5].name}`)}]${data[5].name}[/a][/b][/TD]
-[TD]${data[5].lore}[/TD]
-[TD]${data[5].method}[/TD]
-[TD]${data[5].notes}[/TD]
-[/TR]
-[TR]
-[TD][b][a=${getName(`${data[6].name}`)}]${data[6].name}[/a][/b][/TD]
-[TD]${data[6].lore}[/TD]
-[TD]${data[6].method}[/TD]
-[TD]${data[6].notes}[/TD]
-[/TR]
-[TR]
-[TD][b][a=${getName(`${data[7].name}`)}]${data[7].name}[/a][/b][/TD]
-[TD]${data[7].lore}[/TD]
-[TD]${data[7].method}[/TD]
-[TD]${data[7].notes}[/TD]
-[/TR]
-[TR]
-[TD][b][a=${getName(`${data[8].name}`)}]${data[8].name}[/a][/b][/TD]
-[TD]${data[8].lore}[/TD]
-[TD]${data[8].method}[/TD]
-[TD]${data[8].notes}[/TD]
-[/TR]
-[TR]
-[TD][b][a=${getName(`${data[9].name}`)}]${data[9].name}[/a][/b][/TD]
-[TD]${data[9].lore}[/TD]
-[TD]${data[9].method}[/TD]
-[TD]${data[9].notes}[/TD]
-[/TR]
-[TR]
-[TH][CENTER]Row #3[/CENTER][/TH]
-
-[TH][CENTER]Description[/CENTER][/TH]
-
-[TH][CENTER]Method[/CENTER][/TH]
-
-[TH][CENTER]Notes[/CENTER][/TH]
-[/TR]
-[TR]
-[TD][b][a=${getName(`${data[10].name}`)}]${data[10].name}[/a][/b][/TD]
-[TD]${data[10].lore}[/TD]
-[TD]${data[10].method}[/TD]
-[TD]${data[10].notes}[/TD]
-[/TR]
-[TR]
-[TD][b][a=${getName(`${data[11].name}`)}]${data[11].name}[/a][/b][/TD]
-[TD]${data[11].lore}[/TD]
-[TD]${data[11].method}[/TD]
-[TD]${data[11].notes}[/TD]
-[/TR]
-[TR]
-[TD][b][a=${getName(`${data[12].name}`)}]${data[12].name}[/a][/b][/TD]
-[TD]${data[12].lore}[/TD]
-[TD]${data[12].method}[/TD]
-[TD]${data[12].notes}[/TD]
-[/TR]
-[TR]
-[TD][b][a=${getName(`${data[13].name}`)}]${data[13].name}[/a][/b][/TD]
-[TD]${data[13].lore}[/TD]
-[TD]${data[13].method}[/TD]
-[TD]${data[13].notes}[/TD]
-[/TR]
-[TR]
-[TD][b][a=${getName(`${data[14].name}`)}]${data[14].name}[/a][/b][/TD]
-[TD]${data[14].lore}[/TD]
-[TD]${data[14].method}[/TD]
-[TD]${data[14].notes}[/TD]
-[/TR]
-[TR]
-[TH][CENTER]Row #4[/CENTER][/TH]
-
-[TH][CENTER]Description[/CENTER][/TH]
-
-[TH][CENTER]Method[/CENTER][/TH]
-
-[TH][CENTER]Notes[/CENTER][/TH]
-[/TR]
-[TR]
-[TD][b][a=${getName(`${data[15].name}`)}]${data[15].name}[/a][/b][/TD]
-[TD]${data[15].lore}[/TD]
-[TD]${data[15].method}[/TD]
-[TD]${data[15].notes}[/TD]
-[/TR]
-[TR]
-[TD][b][a=${getName(`${data[16].name}`)}]${data[16].name}[/a][/b][/TD]
-[TD]${data[16].lore}[/TD]
-[TD]${data[16].method}[/TD]
-[TD]${data[16].notes}[/TD]
-[/TR]
-[TR]
-[TD][b][a=${getName(`${data[17].name}`)}]${data[17].name}[/a][/b][/TD]
-[TD]${data[17].lore}[/TD]
-[TD]${data[17].method}[/TD]
-[TD]${data[17].notes}[/TD]
-[/TR]
-[TR]
-[TD][b][a=${getName(`${data[18].name}`)}]${data[18].name}[/a][/b][/TD]
-[TD]${data[18].lore}[/TD]
-[TD]${data[18].method}[/TD]
-[TD]${data[18].notes}[/TD]
-[/TR]
-[TR]
-[TD][b][a=${getName(`${data[19].name}`)}]${data[19].name}[/a][/b][/TD]
-[TD]${data[19].lore}[/TD]
-[TD]${data[19].method}[/TD]
-[TD]${data[19].notes}[/TD]
-[/TR]
-[TR]
-[TH][CENTER]Row #5[/CENTER][/TH]
-
-[TH][CENTER]Description[/CENTER][/TH]
-
-[TH][CENTER]Method[/CENTER][/TH]
-
-[TH][CENTER]Notes[/CENTER][/TH]
-[/TR]
-[TR]
-[TD][b][a=${getName(`${data[20].name}`)}]${data[20].name}[/a][/b][/TD]
-[TD]${data[20].lore}[/TD]
-[TD]${data[20].method}[/TD]
-[TD]${data[20].notes}[/TD]
-[/TR]
-[TR]
-[TD][b][a=${getName(`${data[21].name}`)}]${data[21].name}[/a][/b][/TD]
-[TD]${data[21].lore}[/TD]
-[TD]${data[21].method}[/TD]
-[TD]${data[21].notes}[/TD]
-[/TR]
-[TR]
-[TD][b][a=${getName(`${data[22].name}`)}]${data[22].name}[/a][/b][/TD]
-[TD]${data[22].lore}[/TD]
-[TD]${data[22].method}[/TD]
-[TD]${data[22].notes}[/TD]
-[/TR]
-[TR]
-[TD][b][a=${getName(`${data[23].name}`)}]${data[23].name}[/a][/b][/TD]
-[TD]${data[23].lore}[/TD]
-[TD]${data[23].method}[/TD]
-[TD]${data[23].notes}[/TD]
-[/TR]
-[TR]
-[TD][b][a=${getName(`${data[24].name}`)}]${data[24].name}[/a][/b][/TD]
-[TD]${data[24].lore}[/TD]
-[TD]${data[24].method}[/TD]
-[TD]${data[24].notes}[/TD]
-[/TR]
-[/TABLE]
-
-
-[a=info][HEADING=2][CENTER]Difficulty[/CENTER][/HEADING][/a]
-[center]Overall Bingo Difficulty: [b][COLOR=rgb(65, 168, 95)]Easy[/COLOR][COLOR=rgb(184, 49, 47)]Hard[/COLOR][COLOR=rgb(0, 168, 133)]Medium[/COLOR][/b]
-[/center]
-
-[a=order][HEADING=2][CENTER]Step-by-Step for the Start[/CENTER][/HEADING]
-[/a]
-
-Once bingo opens lobby hop until you can create a profile.
-/hub immediately and go to the designated hub in splashes for a splash.
-Equip your Bingo Pet and begin farming wheat, sell an inventory of wheat for quick coins and buy a sword.
-Go to the Spider's Den and get the 3 easy relics (-142, 82, -340/-201, 83, -352/-341, 122, -252).
-Unlock The End and Dwarven Mines.
-
-[a=minions][HEADING=2][CENTER]Recommended Minions[/CENTER][/HEADING][/a]
-
-[center][b]Recommended Minion Slots: [/b][/center]
-
-[HEADING=2][CENTER][a=notes]Additional Information[/a][/CENTER][/HEADING]
-
-Tips/Notes:
-Do your daily commissions until HOTM 3.
-Remember to unlock the Mining Speed perk at HOTM 1.
-Use Better Together (500 mining speed) and Gone With The Wind (300-600 mining speed) to your advantage.
-You can get coins from doing relics in spider den. (Max 310,000)
-Mine sand to reach mining XII for the Dwarven Mines.
-Put #BingoBrewers after our splashes!
-
-Guide by [USER=3768762]Dredlig[/USER], [USER=1079233]HunterTheHunter[/USER], [USER=3270837]Indigo_Polecat[/USER]
-Website by [USER=2881883]XessDx[/USER]`
-
-
-document.getElementById('btnOutput').value = bbcode;
-document.getElementById('btnOutput').style.display = 'block';
-}
-
-function getName(str) {
-    return str.replaceAll(/[^0-9a-z]/gi, '').toLowerCase();
-} 
-
-</script>
-
+		<div id="output"></div>
+		<textarea id="btnOutput" class="btnOutput"></textarea>
+		<script src="index.js" defer></script>
+	</body>
 </html>
