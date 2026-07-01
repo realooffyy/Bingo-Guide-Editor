@@ -6,7 +6,7 @@ Access here: https://realooffyy.github.io/Bingo-Guide-Editor/
 ### New features:
 - Protection against accidental page refreshes
 - Generated text is automatically copied to clipboard
-- 
+
 ### Fixes:
 - Date edge-cases fixed by checking the bingo API instead of the current date
 
